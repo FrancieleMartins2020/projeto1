@@ -23,6 +23,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -106,10 +107,12 @@ ul li a {
   font-weight: bold;
   transition: background 0.2s;
 }
+/*pseudo-selector*/
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
+
 /*social links*/
 #social-links {
   display: flex;
@@ -134,4 +137,13 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+/*media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
